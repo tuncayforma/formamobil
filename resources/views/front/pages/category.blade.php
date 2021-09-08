@@ -9,7 +9,7 @@
                     <!--Nav Button  -->
                     <nav>
                         <div class="sel sel--black-panther">
-                            <select class="form-select" onchange="location = this.value;">
+                            <select class="form-select" onchange="location = this.value;" style="border-radius: 10px;">
                                 <option id="category-filter" @if(Request::segment(4)==null) selected @endif value="{{route('categoryall')}}">Tüm Ürünler</option>
                                 @for($id=1;$id<=15000;$id+=2500)
                                         <option id="category-filter" @if(Request::segment(4)==$id) selected @endif value="{{route('urunler.filter',[Request::segment(3),$id])}}">{{$id}}₺-{{$id+2499}}₺</option>
